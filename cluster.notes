@@ -1,0 +1,50 @@
+
+A brief explanation of the output....
+
+You supply a set of vectors as input, these are then clustered by one of the
+algorithms the program implements. The output is in 2 forms, a cluster table
+and a dendogram. The table shows the "SEQ NOS" i.e. the sequence of vectors you
+supplied (1 refers to the first vector, 2 to the second, etc.
+The "2CL" column then shows you a clustering into 2 clusters, "3CL" into three,
+etc.
+
+The dendogram shows you the same clustering graphically. Note that the branch
+lengths are not proportional to the scale on the left hand side which shows you
+the distances between the clusters as they are merged (or the loss of
+information content if using the default Ward's method. Note also that only one
+merge occurs per step so the value on the left may be occur more than once when
+two merges should have occurred at exactly the same time.
+
+e.g. If you try the dataset:
+
+1 5 8
+2 3 8
+1 0 5
+3 6 9
+1 9 9
+6 3 8
+2 9 7
+
+clusters 1 & 7 and 2 & 6 are both clustered with a value of 2.5 - really the
+dendogram should show them merging at the same time.
+
+Note that I said "clusters" in the previous line, not "vectors" This is
+potentially the most confusing thing about the output. The numbers that appear
+along the bottom of the dendogram are the cluster numbers when N vectors are
+placed in N clusters. So in the example dataset I just gave you with 7 vectors,
+when there are 7 clusters, the cluster number isn't necessarilly the same as
+the vector number. Here is the cluster table for that example (Ward's method):
+
+     SEQ NOS 2CL 3CL 4CL 5CL 6CL 7CL 8CL 9CL
+     ------- --- --- --- --- --- --- --- --- ----
+          1   1   1   1   1   1   1
+          2   1   1   1   1   1   7
+          3   1   3   3   3   3   3
+          4   1   1   1   5   5   5
+          5   2   2   2   2   2   2
+          6   1   1   4   4   4   4
+          7   2   2   2   2   6   6
+
+So for 7 clusters, Cluster 1 is indeed vector 1, cluster 7 is vector 2, cluster
+2 is vector 5 and cluster 6 is vector 7.
+
