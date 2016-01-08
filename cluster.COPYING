@@ -1,0 +1,26 @@
+                               Cluster
+                               -------
+
+        A program for performing cluster analysis on a set of
+                          arbitrary vectors.
+
+
+The program, Cluster, is based on FORTRAN (HierClus.f) code by
+F. Murtagh, ESA/ESO/STECF, Garching, obtained from a Statlib FTP
+site. This has been completely reimplemented by Dr. Andrew
+C.R. Martin, University College London in C using dynamic memory
+allocation such that arbitrary sets of vectors may be clustered.
+
+The code, cluster.c, may be freely distributed and used for any
+purpose whatsoever, providing this file accompanies and distribution
+of the code and that the authors (F. Murtagh and Dr. Andrew
+C.R. Martin) are acknowledged.
+
+The remaining code in the bioplib directory may be distributed and
+used only according to the conditions laid out in the file COPYING.DOC
+in that directory.
+
+
+
+
+
